@@ -65,10 +65,11 @@ ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update | %waiting%
-echo You are currently running KB1.
+echo You are currently running KB2.
 echo.
 echo You have the current updates/feature updates/security updates.
 echo textOS System - (this can not be removed)
 echo September 2023 - KB1 (this can not be removed)
 goto "" https://github.com/TrisoSoft/Sweepy
+pause
 goto command.trisosoft.home
