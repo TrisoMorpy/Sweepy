@@ -45,6 +45,13 @@ if %command% == launch.setup goto command.trisosoft.ftu
 if %command% == help goto command.trisosoft.help
 if %command% == update goto command.trisosoft.update
 if %command% == issue.tracker goto command.trisosoft.issues
+if %command% == credits goto command.trisosoft.credits
+:command.trisosoft.credits
+cls
+title Credits - %waiting%
+echo TrisoMorpy (founder of TrisoSoft) - lead developer and developer of Sweepy
+pause
+goto command.trisosoft.home
 :command.trisosoft.issues
 cls
 title Issue Tracker - %pleasewait%.
@@ -59,6 +66,7 @@ echo "launch.setup" - launches the setup program.
 echo "help" - launches the help program (the program you are currently running).
 echo "update" - attempts to update the program.
 echo "issue.tracker" - launches the Sweepy issue tracker.
+echo "credits" - shows the credits for Sweepy.
 pause
 goto command.trisosoft.home
 :command.trisosoft.update
@@ -70,9 +78,9 @@ ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update - %waiting%
-echo You are currently running KB3.
+echo You are currently running KB4.
 echo.
-echo The Sweepy Dev team would like to thank you for using Sweepy.
+echo The Sweepy Dev team would like to thank you for using Sweepy 
 start "" https://github.com/TrisoSoft/Sweepy
 pause
 goto command.trisosoft.home
