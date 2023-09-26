@@ -38,7 +38,7 @@ goto command.trisosoft.home
 :command.trisosoft.home
 cls
 title HOME - %waiting%
-echo You have 1 new message waiting on Sweepy Messages, run "messages" to read the message.
+echo ANNOUNCEMENT: Sweepy Message Board has moved online, run "messages" to find the new Message Board.
 echo If you run the "help" command you will be able to find the list of commands (the help command will tell you all of the commands you can run on Sweepy).
 set /p command=
 if %command% == home goto command.trisosoft.home
@@ -51,7 +51,7 @@ if %command% == messages goto command.trisosoft.messages
 :command.trisosoft.messages
 cls
 title Messages - %waiting%
-echo [26th September 2023] [Sweepy]: Our Terms of Service has been updated, please read the "terms of service.txt" file where your Sweepy installation is located.
+start "" https://github.com/TrisoSoft/Sweepy/discussions
 pause
 goto command.trisosoft.home
 :command.trisosoft.credits
@@ -94,7 +94,7 @@ ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update - %waiting%
-echo You are currently running KB6.
+echo You are currently running KB7.
 echo.
 echo The Sweepy Dev team would like to thank you for using Sweepy 
 start "" https://github.com/TrisoSoft/Sweepy
