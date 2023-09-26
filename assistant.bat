@@ -79,14 +79,22 @@ pause
 goto command.trisosoft.home
 :command.trisosoft.update
 cls
-title Update - %pleasewait%.
+title Update - %waiting%
+echo Is it OK if Sweepy connects to the internet to download the latest version?
+echo Type "y" for yes, type "n" for no.
+set /p command=
+if %command% == y goto command.trisosoft.update.connect
+if %command% == n goto command.trisosoft.home
+:command.trisosoft.update.connect
+cls
+title Update - %pleasewait%
 echo Please wait whilst we connect to the internet. Your default web browser will be opened.
 echo [TASK 1]: Checking your internet connection - this will connect to "google.com"
 ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update - %waiting%
-echo You are currently running KB5.
+echo You are currently running KB6.
 echo.
 echo The Sweepy Dev team would like to thank you for using Sweepy 
 start "" https://github.com/TrisoSoft/Sweepy
