@@ -6,9 +6,11 @@ Last updated on: Tuesday 26th September 2023
 2. If you have paid for Sweepy, please demand your money back straight away - THIS MIGHT BE A SCAM.
 3. You may only recreate/redistribute Sweepy with permission from TrisoSoft.
 4. Sweepy's updates can end at any time - we are not obliged to provide updates to Sweepy.
+5. Feature Activation Keys are not for purchase.
 
 UPDATE LOG
 ----------
+- 29th September 2023 - added NO 5.
 - 27th September 2023 - added NO 4.
 - 26th September 2023 - added NO 3. 
 - 26th September 2023 - added the inital text to the terms (v1.0)
