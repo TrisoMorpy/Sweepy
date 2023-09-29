@@ -1,8 +1,21 @@
 @echo off
-goto command.trisosoft.ftu
+goto command.trisosoft.ftu.fak
 set waiting = Waiting for a command.
 set pleasewait = Please wait for Sweepy to finish.
-:command.trisosoft.ftu
+:command.trisosoft.ftu.fak
+cls
+title Please enter your Feature Activation Key
+echo Please enter yout Feature Activation Key
+echo If you do not own a Feature Activation Key, please just type "na".
+set /p fak=
+if %fak% == THANKYOU goto command.trisosoft.fak.activate.thankyou
+if %fak% == thankyou goto command.trisosoft.fak.activate.thankyou
+:command.trisosoft.fak.activate.thankyou
+cls
+title Activating your product...
+color 60
+goto command.trisosoft.ftu.afak
+:command.trisosoft.ftu.afak
 cls
 title Please wait...
 echo Sweepy is creating necessary files (you can delete these at any time).
@@ -42,12 +55,31 @@ echo ANNOUNCEMENT: Sweepy Message Board has moved online, run "messages" to find
 echo If you run the "help" command you will be able to find the list of commands (the help command will tell you all of the commands you can run on Sweepy).
 set /p command=
 if %command% == home goto command.trisosoft.home
-if %command% == launch.setup goto command.trisosoft.ftu
+if %command% == launch.setup goto command.trisosoft.ftu.afak
 if %command% == help goto command.trisosoft.help
 if %command% == update goto command.trisosoft.update
 if %command% == issue.tracker goto command.trisosoft.issues
 if %command% == credits goto command.trisosoft.credits
 if %command% == messages goto command.trisosoft.messages
+if %command% == dev.mode goto command.trisosoft.developermode
+:command.trisosoft.developermode
+cls
+title Developer - %waiting%
+echo Sweepy's time - %time%
+echo Sweepy's date - %date%
+echo.
+echo Would you like to attempt to connect to the internet to see if your internet connection is working OK?
+echo Type "y" or "n".
+set /p command=
+if %command% == y goto command.trisosoft.developermode.internettest
+if %command% == n goto command.trisosoft.home
+:command.trisosoft.developermode.internettest
+cls
+title Developer (Internet Test) - %pleasewait%
+ping google.com
+title Developer (Internet Test) - %waiting%
+pause
+goto command.trisosoft.home
 :command.trisosoft.messages
 cls
 title Messages - %waiting%
@@ -94,7 +126,7 @@ ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update - %waiting%
-echo You are currently running KB7.
+echo You are currently running KB8.
 echo.
 echo The Sweepy Dev team would like to thank you for using Sweepy 
 start "" https://github.com/TrisoSoft/Sweepy
