@@ -5,7 +5,7 @@ set pleasewait = Please wait for Sweepy to finish.
 :command.trisosoft.ftu.fak
 cls
 title Please enter your Feature Activation Key
-echo Please enter yout Feature Activation Key
+echo Please enter your Feature Activation Key
 echo If you do not own a Feature Activation Key, please just type "na".
 set /p fak=
 if %fak% == na goto command.trisosoft.ftu.afak
@@ -127,7 +127,7 @@ ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update - %waiting%
-echo You are currently running KB8.1.
+echo You are currently running KB9.
 echo.
 echo The Sweepy Dev team would like to thank you for using Sweepy 
 start "" https://github.com/TrisoSoft/Sweepy
