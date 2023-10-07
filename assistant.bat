@@ -14,6 +14,7 @@ if %fak% == thankyou goto command.trisosoft.fak.activate.thankyou
 :command.trisosoft.fak.activate.thankyou
 cls
 title Activating your product...
+echo Your key will no longer recieve support due to Sweepy's closure.
 color 60
 goto command.trisosoft.ftu.afak
 :command.trisosoft.ftu.afak
@@ -53,6 +54,8 @@ goto command.trisosoft.home
 cls
 title HOME - %waiting%
 echo ANNOUNCEMENT: Sweepy Message Board has moved online, run "messages" to find the new Message Board.
+echo ANNOUNCEMENT: Sweepy has now been discontinued by TrisoSoft. Run the command "what.does.this.mean" to find out more.
+echo.
 echo If you run the "help" command you will be able to find the list of commands (the help command will tell you all of the commands you can run on Sweepy).
 set /p command=
 if %command% == home goto command.trisosoft.home
@@ -63,6 +66,19 @@ if %command% == issue.tracker goto command.trisosoft.issues
 if %command% == credits goto command.trisosoft.credits
 if %command% == messages goto command.trisosoft.messages
 if %command% == dev.mode goto command.trisosoft.developermode
+if %command% == what.does.this.mean goto command.trisosoft.closure
+:command.trisosoft.closure
+cls
+title Goodbye Sweepy - %waiting%
+echo Dear Sweepy Users,
+echo As of Sunday 8th October 00:25am, Sweepy and it's services will be discontinued forever.
+echo We have decided to do this for the following reasons:
+echo - Developers are having personal issues in their lives.
+echo - We are unable to keep Sweepy up to date.
+echo - School is too demanding for our developers.
+echo.
+echo We're really sorry, but goodbye and thank you for using Sweepy,
+echo TrisoSoft.
 :command.trisosoft.developermode
 cls
 title Developer - %waiting%
@@ -108,6 +124,7 @@ echo "help" - launches the help program (the program you are currently running).
 echo "update" - attempts to update the program.
 echo "issue.tracker" - launches the Sweepy issue tracker.
 echo "credits" - shows the credits for Sweepy.
+echo "what.does.this.mean" - information on Sweepy's closure.
 pause
 goto command.trisosoft.home
 :command.trisosoft.update
@@ -127,7 +144,7 @@ ping google.com
 echo [TASK 1]: Completed. If this didn't work, please make sure you are connected to the internet.
 pause
 title Update - %waiting%
-echo You are currently running KB9.
+echo You are currently running KB10.
 echo.
 echo The Sweepy Dev team would like to thank you for using Sweepy 
 start "" https://github.com/TrisoSoft/Sweepy
